@@ -42,7 +42,7 @@ async function callGemini(promptText) {
   return resp.data.candidates[0].content;
 }
 
-// 5. Browser “tools”
+// 5. Browser "tools"
 async function doGoto(page, url) {
   await page.goto(url, { waitUntil: 'domcontentloaded' });
   return `✅ Navigated to ${url}`;
