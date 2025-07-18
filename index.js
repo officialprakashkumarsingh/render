@@ -39,7 +39,7 @@ async function callGemini(promptText) {
     maxOutputTokens: 1024
   };
   const resp = await axios.post(url, body);
-  return resp.data.candidates[0].content;
+  return resp.data.candidates[0].message.content;
 }
 
 // 5. Browser "tools"
